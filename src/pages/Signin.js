@@ -11,7 +11,10 @@ const Signin = ({userExist}) => {
             console.log(emailField.current.value, passwordField.current.value);
             if(userExist(emailField.current.value, passwordField.current.value)) {
                 sessionStorage.setItem("LOGED_IN", "true")
-                history.replace("/")
+                setTimeout(() => {
+                    history.replace("/")
+                }, 3000)
+                
             }
             
         }

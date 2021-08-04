@@ -30,11 +30,11 @@ const Settings = () => {
                         <p className = "font-bold text-purple-900">95.8%</p>
                     </div>
                 </div>
-                <div className = "flex justify-between items-end py-2 text-bold text-xl border-b-4 mb-4">
+                <div className = "flex justify-between items-end py-2 text-bold text-sm border-b-4 mb-4">
                     <p className = "">Set New Threshold Level</p>
                     <button className = "border border-purple-900 p-1 px-4 text-purple-900 rounded" onClick = {() => history.push("/threshold")}>Edit</button>
                 </div>
-                <div className = "flex justify-between items-end py-2 text-bold text-xl border-b-4 mb-4">
+                <div className = "flex justify-between items-end py-2 text-bold text-sm border-b-4 mb-4">
                     <p className = "">Password</p>
                     <button className = "border border-purple-900 p-1 px-4 text-purple-900 rounded" onClick = {() => history.push("/reset-password")}>Edit</button>
                 </div>
