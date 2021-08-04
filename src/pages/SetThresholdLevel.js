@@ -1,6 +1,17 @@
+import {useEffect} from "react"
 import {useHistory} from "react-router-dom"
 const SetThresholdLevel = () => {
     const history = useHistory();
+
+    useEffect(() => {
+        const logedin = sessionStorage.getItem("LOGED_IN");
+        if(logedin !== "true") {
+            
+            history.replace("/signin")
+        }
+        // eslint-disable-next-line
+    }, [])
+
     return(
         <div className = "w-full p-4">
             <i className="fas fa-long-arrow-alt-left text-2xl font-bold text-purple-900" onClick = {() => history.goBack()}></i>

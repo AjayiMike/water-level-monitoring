@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import LiquidChart from 'react-liquidchart'
 import { useHistory } from "react-router-dom";
 
@@ -14,7 +14,14 @@ const Home = () => {
     // eslint-disable-next-line
     const [waterLevel, setWaterLevel] = useState(49.514)
 
-
+    useEffect(() => {
+        const logedin = sessionStorage.getItem("LOGED_IN");
+        if(logedin !== "true") {
+            
+            history.replace("/signin")
+        }
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <div className="w-full">

@@ -1,6 +1,17 @@
+import {useEffect} from "react"
 import { useHistory } from "react-router-dom";
 const Settings = () => {
     const history = useHistory();
+
+    useEffect(() => {
+        const logedin = sessionStorage.getItem("LOGED_IN");
+        if(logedin !== "true") {
+            
+            history.replace("/signin")
+        }
+        // eslint-disable-next-line
+    }, [])
+
     return(
         <div className = "w-full">
             <div className = "flex justify-between items-center font-bold p-4 text-2xl bg-purple-900 p-4 text-white">
